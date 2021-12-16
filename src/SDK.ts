@@ -101,6 +101,8 @@ export default class SDK implements ISDK {
     if (bypassCache) {
       headers = { ...Constants.bypassCacheHeaders, ...headers };
     }
+    headers = {...Constants.crossOriginHeaders, ...headers};
+    
     const response = await axiosInstance.get(endpoint, {
       headers,
     });

@@ -8,6 +8,9 @@ export default class Constants {
   public static readonly bypassCacheHeaders = {
     "cache-control": "no-store, must-revalidate, no-cache",
   };
+  public static readonly crossOriginHeaders = {
+    "Access-Control-Allow-Origin": "*",
+  };
   public static readonly defaultChannelId = ChannelId.LCW;
   public static readonly defaultLocale = "en-us";
   public static readonly noContentStatusCode = 204;
